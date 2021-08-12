@@ -1,0 +1,555 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    scroll-behavior:smooth;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.js-sp-be{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.js-sp-ar{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.js-sp-ev{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.js-sp-ce{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+/*header*/
+
+header{
+	background: url(img/header.png);
+	height: 825px;
+}
+
+/*header-info*/
+
+.header-info{
+	padding-top: 53px;
+	align-items: center;
+}
+
+/*phone-menu*/
+
+.bureger-menu{
+	align-items: center;
+} 
+
+.phone-memu{
+	margin-left: 30px;
+	display: none;
+}
+
+.menu-btn {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	z-index:2;
+	overflow: hidden;
+}
+
+.menu-btn span {
+	width: 30px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.menu {
+	position: absolute;
+	text-align: center;
+	top: 120px;
+	left: 0;
+	width: 100%;
+	height: 200px;
+	padding: 15px;
+	background: rgb(231, 93, 0, 0.7);
+	transform: translateX(-101%);
+	transition: transform 0.5s; 
+}
+
+
+.menu a:hover{
+	text-decoration: underline black;
+}
+
+.menu.active {
+	transform: translateX(0);
+}
+
+.menu li {
+	list-style-type: none;
+	padding-top: 20px;
+	
+}
+
+.menu-btn.active span:first-of-type {
+	transform: translateX(100%);
+}
+
+.menu-btn.active span:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*navbar*/
+
+.navbar{
+	margin-top: 34px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+a.navbar-link{
+	font-family: 'Bebas Neue', cursive;
+	text-decoration: none;
+	font-size: 20.9px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #3d2514;
+}
+
+a.navbar-link:hover{
+	text-decoration: underline black;
+}
+
+a.navbar-link:not(:last-child){
+	margin-right: 40px;
+}
+
+/*header-wrap*/
+
+.header-wrap{
+	margin-top: 78px;
+}
+
+.header-text{
+	margin-top: 75px;
+}
+
+.header-text h1{
+	margin-top: 24px;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 114.3px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-shadow: 4px 5px 0px #fee8bc;
+	color: #3d2514;
+}
+
+.header-text h2{
+	margin-top: 27px;
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 56.5px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-shadow: 4px 5px 0px #fee8bc;
+	color: #3d2514;
+}
+
+/*burger-block*/
+a.a-burger{
+	text-decoration: none;
+}
+
+.burger-hover:hover{
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.padding-burger{
+	padding: 31px 24px;
+}
+
+.h2-burger{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 41.7px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.span-burger{
+	font-family: 'Bebas Neue', cursive;
+	font-size: 25px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.burger-block{
+	margin-top: 78px;
+}
+
+.most-popular{
+	background: url(img/popular_burger.png);
+	width: 596px;
+	height: 420px;
+}
+
+.more-fan{
+	background: url(img/fun_burger.png);
+	width: 596px;
+	height: 192px;
+}
+
+.fresh{
+	margin-top: 35px;
+	background: url(img/fresh_burger.png);
+	width: 596px;
+	height: 192px;
+}
+
+.burger-button-block{
+	text-align: center;
+}
+
+.burger-button-block button{
+	margin-top: 71px;
+	cursor: pointer;
+	border:none;
+	padding: 8px 20px 8px 20px;
+	background-color: #ffc045;
+	font-family: 'Bebas Neue';
+	font-size: 25px;
+	line-height: 37px;
+	font-weight: 300;
+	color: #3d2514;
+}
+
+.burger-button-block button:hover{
+	border:solid 2.4px black;
+}
+
+/*choose*/
+
+.choose{
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.choose-text h2{
+	margin-top: 39px;
+	font-family: 'Alfa Slab One';
+	font-size: 50px;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #3d2514;
+}
+
+.choose-text p{
+	margin-top: 31px;
+	margin-bottom: 100px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16.7px;
+	line-height: 29px;
+	font-weight: 400;
+	color: #3d2514;
+}
+
+.burger-choose123 h2{
+	margin-top: 22px;
+	font-family: 'Bebas Neue';
+	font-size: 37.5px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #3d2514;
+}
+
+.burger-choose123 span{
+	margin-top: 23px;
+	font-family: Montserrat;
+	font-size: 16.7px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #3d2514;
+}
+
+.burger-choose123 button{
+	cursor: pointer;
+	margin-top: 36px;
+	border:none;
+	padding: 22px 38px;
+	background-color: #bf2222;
+	font-family: 'Alfa Slab One';
+	font-size: 16.7px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.burger-choose123 button:hover{
+	border:solid 2px black;
+	transition: 0.3s;
+}
+
+/*slider*/
+
+.slider{
+	margin-top: 131px;
+	display: flex;
+	width: 100%;
+	height: 470px;
+	
+}
+
+.slider-text{
+	width: 659px;
+	padding: 63px 53px;
+}
+
+.slider-book-text span{
+	font-family: 'Bebas Neue';
+	font-size: 29.2px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: #3d3d3d;
+}
+
+.slider-book-text h2{
+	margin-top: 11px;
+	font-family: 'Alfa Slab One';
+	font-size: 41.7px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #3d2514;
+}
+
+.slider-text p{
+	margin-top: 44px;
+	font-family: Montserrat;
+	font-size: 20.9px;
+	font-weight: 400;
+	color: #3d3d3d;
+}
+
+.slider-img{
+	padding: 25px 25px 0 25px;
+}
+
+.slider-btn{
+	margin-top: -50px;
+	margin-left: 56px;
+}
+
+
+.slider-btn button{
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+	border-radius: 50%;
+	border:none;
+	background-color: #dcdcdc;
+}
+
+.slider-btn button:hover{
+	background-color: #ffc045;
+}
+
+.slider-btn button:focus{
+	background-color: #ffc045;
+}
+
+/*Reservation*/
+
+.Reservation{
+	background: url(img/reservation.png);
+	min-height: 650px;
+	margin-top: 100px;
+}
+
+.book-text {
+	text-align: center;
+	padding-top: 60px;
+}
+
+.book-input{
+	margin-top: 62px;
+}
+
+.input-link{
+	margin:13px;
+}
+
+.input-link button{
+	border:none;
+	cursor: pointer;
+	margin-top: 27px;
+	width: 379px;
+	height: 65px;
+	background-color: #bf2222;
+	border-radius: 5px;
+	font-family: 'Alfa Slab One';
+	font-size: 20.9px;
+	line-height: 45px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
+.input-link button:hover{
+	opacity: 0.8;
+}
+
+.input-book{
+	margin-top: 27px;
+	display: block;
+	width: 379px;
+	height: 65px;
+	background-color: rgba(235,174,76,0.0);
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 20.9px;
+	line-height: 45px;
+	font-weight: 400;
+	color: #3d3d3d;
+}
+
+/*footer*/
+
+.footer{
+	margin-top: 9px;
+}
+
+.burger-place{
+	background:url(img/footer.png);
+	height: 525px;
+}
+
+.burger-place-block{
+	padding: 43px 84px;
+}
+
+.burger-place-block2{
+	margin-top: 72px;
+	display:flex;
+	flex-direction: column;
+}
+
+.burger-house-block2-link-2{
+	margin-top: 29px;
+}
+
+.burger-place-block p{
+	margin-top: 48px;
+	font-family: Montserrat;
+	font-size: 16.7px;
+	line-height: 25px;
+	font-weight: 400;
+	color: #ffffff;
+}
+
+.place-block-3 span{
+	font-family: 'Bebas Neue';
+	font-size: 16.7px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: #ffffff;
+	margin-top: 172px;
+}
+
+.footer-icon{
+	margin-top: 163px;
+}
+
+.footer-icon a{
+	text-decoration: none;
+}
+

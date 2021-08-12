@@ -1,0 +1,95 @@
+@media only screen and (max-width:1254px){
+    .more-fan{
+        background: url(img/fun_burger.png);
+        margin-top: 35px;
+    }
+    
+}
+
+@media only screen and (max-width:1090px){
+    .place-block-2 p{
+        display: none;
+    }
+
+    .slider{
+        display: none;
+    }
+
+    .slider-btn{
+        display: none;
+    }
+
+    .header-burger{
+        display: none;
+    }
+
+    .header-text{
+        text-align: center;
+        margin: 100px auto;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    
+}
+
+@media only screen and (max-width:981px){
+    .burger-choose-2, .burger-choose-3{
+        margin-top: 75px;
+    }
+}
+
+@media only screen and (max-width:650px){
+    .header-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-info a{
+        margin-top: 20px;
+    }
+
+    .header-text{
+        margin-top: 50px;
+    }
+
+    .burger-block{
+        display: none;
+    }
+
+    .header-text h1{
+        font-size: 90.3px;
+    }
+
+    .place-block-3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .place-block-3 span{
+        margin-top: 70px;
+    } 
+
+    .footer-icon{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .navbar{
+        display: none;
+    }
+
+    .phone-memu{
+        display: block;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .header-text h1{
+        font-size: 70.3px;
+    }
+}
